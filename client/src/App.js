@@ -6,9 +6,7 @@ import ListingWrapper from './components/ListingWrapper/ListingWrapper';
 function App() {
   return (
     <>
-      <Nav>
-        <h1>CatReader</h1>
-      </Nav>
+      <Nav title="CatReader"/>
       <Main>
         <ListingWrapper/>
       </Main>

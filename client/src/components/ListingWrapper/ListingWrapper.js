@@ -15,10 +15,16 @@ function ListingWrapper () {
     })
     .finally(() => setIsLoading(false));
    }, []);
+
     return (
       <StyledListingWrapper>
        {books.map(book => 
-        <Card key={`${book["Book Id"]}`}>{book["Title"]}</Card>
+        <Card 
+          key={`${book["Book Id"]}`} 
+          title={`${book["Title"]}`}
+          author={`${book["Author"]}`}
+          shelf={`${book["Exclusive Shelf"]}`}
+        ></Card>
       )}
       </StyledListingWrapper>
     );

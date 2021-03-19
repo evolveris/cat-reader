@@ -1,9 +1,11 @@
 import StyledCard from './Card.styled';
 
-function Card ({ children}) {
+function Card ({ title, author, shelf }) {
     return (
       <StyledCard>
-        {children}
+        <h2>{title}</h2>
+        <h3>{author}</h3>
+        <h4>{shelf}</h4>
       </StyledCard>
     );
 }

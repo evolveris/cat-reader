@@ -1,9 +1,9 @@
 import StyledNav from './Nav.styled';
 
-function Nav ({ children}) {
+function Nav ({ title }) {
     return (
       <StyledNav>
-        {children}
+       <h1>{title}</h1>
       </StyledNav>
     );
 }
