@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const csv = require('csvtojson');
 
-const csvFilePath = './data/goodreads_export.csv';
+const csvFilePath = './data/goodreads_export_slim.csv';
 let goodreadsExport;
 
 csv()
