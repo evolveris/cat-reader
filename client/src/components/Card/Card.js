@@ -1,6 +1,6 @@
 import StyledCard from './Card.styled';
 
-function Card ({ title, author, shelf }) {
+function Card ({ title, author, shelf, isbn }) {
     return (
       <StyledCard>
         <h2>{title}</h2>

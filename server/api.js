@@ -16,7 +16,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/', (req, res) => {
+app.get('/books', (req, res) => {
   res.json(goodreadsExport);
 });
 

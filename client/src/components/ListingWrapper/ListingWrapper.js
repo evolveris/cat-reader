@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import StyledListingWrapper from './ListingWrapper.styled';
 import Card from './../Card/Card'
+import { formatISBN } from './../../modules/utils'
 
 function ListingWrapper () {
 
@@ -8,7 +9,7 @@ function ListingWrapper () {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {   
-    fetch('http://localhost:5000')
+    fetch('http://localhost:5000/books')
     .then(response => response.json())
     .then(data => {
       setBooks(data)
@@ -24,6 +25,7 @@ function ListingWrapper () {
           title={`${book["Title"]}`}
           author={`${book["Author"]}`}
           shelf={`${book["Exclusive Shelf"]}`}
+          isbn={`${formatISBN(book["ISBN"])}`}
         ></Card>
       )}
       </StyledListingWrapper>
