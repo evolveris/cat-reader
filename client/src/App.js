@@ -8,7 +8,7 @@ import ListingWrapper from './components/ListingWrapper/ListingWrapper';
 function App() {
   return (
     <ThemeProvider theme={{ colors: COLORS, fontSizes: FONT_SIZES }}>
-      <Nav title="CatReader" subtitle="Liutza's reading log"/>
+      <Nav title="CatReader" subtitle="Reading log"/>
       <Main>
         <ListingWrapper/>
       </Main>

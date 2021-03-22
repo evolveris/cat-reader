@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import StyledListingWrapper from './ListingWrapper.styled';
-import Card from './../Card/Card'
+import Card from './../Card/Card';
+import Loader from './../Loader/Loader';
 import { formatISBN } from './../../modules/utils'
 
 function ListingWrapper () {
@@ -18,8 +19,10 @@ function ListingWrapper () {
    }, []);
 
     return (
-      <StyledListingWrapper>
-       {books.map(book => 
+      <StyledListingWrapper className="styledListingWrapper">
+       {isLoading ? 
+       <Loader/> : 
+       books.map(book => 
         <Card 
           key={`${book["Book Id"]}`} 
           title={`${book["Title"]}`}

@@ -2,7 +2,8 @@ const COLORS = {
     text: '#726366',
     background: 'aliceblue',
     purple: 'darkslateblue',
-    white: 'white'
+    white: 'white',
+    red: 'crimson'
 };
 
 const FONT_SIZES = {

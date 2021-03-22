@@ -6,5 +6,6 @@ const StyledListingWrapper = styled.div`
     width: 75%;
     margin-left: auto;
     margin-right: auto;
+    justify-content: center;
 `
 export default StyledListingWrapper
