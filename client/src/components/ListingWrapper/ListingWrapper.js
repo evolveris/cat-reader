@@ -1,11 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
+import { Context } from './../../store/store'
 import StyledListingWrapper from './ListingWrapper.styled';
 import Card from './../Card/Card';
 import Loader from './../Loader/Loader';
 import { formatISBN } from './../../modules/utils'
 
 function ListingWrapper () {
-
+  const [state, dispatch] = useContext(Context);
   const [books, setBooks] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -15,7 +16,13 @@ function ListingWrapper () {
     .then(data => {
       setBooks(data)
     })
-    .finally(() => setIsLoading(false));
+    .then(() => {
+      dispatch({type: 'SET_LOADING', payload: false})
+    })
+    .finally(() => {
+        setIsLoading(false)
+      }
+    );
    }, []);
 
     return (

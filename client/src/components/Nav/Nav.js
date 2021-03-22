@@ -1,10 +1,13 @@
 import StyledNav from './Nav.styled';
+import { Context } from './../../store/store';
+import { useContext } from 'react';
 
-function Nav ({ title, subtitle }) {
+function Nav () {
+    const [state, dispatch] = useContext(Context);
     return (
       <StyledNav>
-       <h1>{title}</h1>
-       <p>{subtitle}</p>
+       <h1>CatReader</h1>
+       <p>{state.isLoading ? `Fetching books...` : `Reading log`}</p>
       </StyledNav>
     );
 }

@@ -1,6 +1,7 @@
 import './App.css';
 import { ThemeProvider } from 'styled-components';
-import { COLORS, FONT_SIZES } from './components/constants'
+import { COLORS, FONT_SIZES } from './components/constants';
+import Store from './store/store';
 import Main from './components/Main/Main';
 import Nav from './components/Nav/Nav';
 import ListingWrapper from './components/ListingWrapper/ListingWrapper';
@@ -8,10 +9,12 @@ import ListingWrapper from './components/ListingWrapper/ListingWrapper';
 function App() {
   return (
     <ThemeProvider theme={{ colors: COLORS, fontSizes: FONT_SIZES }}>
-      <Nav title="CatReader" subtitle="Reading log"/>
-      <Main>
-        <ListingWrapper/>
-      </Main>
+      <Store>
+        <Nav/>
+        <Main>
+          <ListingWrapper/>
+        </Main>
+      </Store>
     </ThemeProvider>
   );
 }
