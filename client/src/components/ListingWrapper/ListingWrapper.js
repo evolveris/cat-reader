@@ -17,7 +17,7 @@ function ListingWrapper () {
       setBooks(data)
     })
     .then(() => {
-      dispatch({type: 'SET_LOADING', payload: false})
+      dispatch({type: 'SET_FETCHING_BOOKS', payload: false})
     })
     .finally(() => {
         setIsLoading(false)

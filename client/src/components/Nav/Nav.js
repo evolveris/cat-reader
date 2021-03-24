@@ -7,7 +7,7 @@ function Nav () {
     return (
       <StyledNav>
        <h1>CatReader</h1>
-       <p>{state.isLoading ? `Fetching books...` : `Reading log`}</p>
+       <p>{state.fetchingBooks ? `Fetching books...` : `Reading log`}</p>
       </StyledNav>
     );
 }

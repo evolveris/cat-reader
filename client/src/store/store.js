@@ -2,7 +2,7 @@ import React, {createContext, useReducer} from "react";
 import Reducer from './reducer'
 
 const initialAppState = {
-    isLoading: true,
+    fetchingBooks: true,
     error: null
 };
 

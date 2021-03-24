@@ -1,9 +1,9 @@
 const Reducer = (state, action) => {
     switch (action.type) {
-        case 'SET_LOADING':
+        case 'SET_FETCHING_BOOKS':
             return {
                 ...state,
-                isLoading: action.payload
+                fetchingBooks: action.payload
             }
         case 'SET_ERROR':
             return {
